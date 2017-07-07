@@ -1,4 +1,4 @@
-package exercise.exercise4;
+package exercise5;
 
 import java.util.Arrays;
 import java.util.Comparator;
