@@ -79,6 +79,13 @@ public class MyResizableHashMap<K, V> {
 
     public V remove(K key) {
         // TODO Returns the value associated with the key removed from the map or null if the key wasn't found
+        for(Node <K,V> n : buckets){
+            if(n.entry.getKey().equals(key)){
+                Node<K,V> next = n.getNextElement();
+                n = null;
+                //cand sterg un el trebuie sa il fac null si el anterior trebuie sa stie ca next element e next el al el null
+            }
+        }
         return null;
     }
 
@@ -94,11 +101,15 @@ public class MyResizableHashMap<K, V> {
 
     public int size() {
         // TODO Return the number of the Entry objects stored in all the buckets
-        return 0;
+        return size;
     }
 
     public void clear() {
         // TODO Remove all the Entry objects from the bucket list
+        for(int i=0; i< buckets.length; i++){
+            buckets[i] = null;
+        }
+        size = 0;
     }
 
     public Set<MyEntry> entrySet() {
