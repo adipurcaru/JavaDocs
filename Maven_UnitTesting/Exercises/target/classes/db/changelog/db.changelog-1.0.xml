@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="changelog-1.0-adrian" author="adrian">
+        <createTable tableName="PEOPLE-Adrian">
+            <column name="PERS_ID" type="number">
+                <constraints primaryKey="true"></constraints>
+            </column>
+            <column name="FIRST_NAME" type="varchar2(40)"></column>
+            <column name="LAST_NAME" type="varchar2(40)"></column>
+            <column name="EMAIL" type="varchar2(40)">
+                <constraints nullable="false"></constraints>
+            </column>
+            <column name="PHONE_NUMBER" type="varchar2(25)"></column>
+            <column name="ADDRESS_ID" type="number(6)">
+                <constraints nullable="false"></constraints>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

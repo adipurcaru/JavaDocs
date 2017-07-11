@@ -14,8 +14,7 @@ public class HelloWorld {
      * method for saying hello
      */
     public void sayHello(){
-        logger.debug("DEBUG -> Enters in sayHello() method from HelloWorld");
-        logger.info("INFO -> Enters in returnHelloKey from HelloWorld");
+        
         System.out.println("Hello World!");
     }
     
